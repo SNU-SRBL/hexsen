@@ -1,0 +1,21 @@
+[0.255s] Invoking command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/sensor': PYTHONPATH=/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sensor build --build-base /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/build install --record /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/install.log --single-version-externally-managed install_data
+[0.354s] running egg_info
+[0.354s] writing ../../build/sensor/sensor.egg-info/PKG-INFO
+[0.354s] writing dependency_links to ../../build/sensor/sensor.egg-info/dependency_links.txt
+[0.354s] writing entry points to ../../build/sensor/sensor.egg-info/entry_points.txt
+[0.354s] writing requirements to ../../build/sensor/sensor.egg-info/requires.txt
+[0.354s] writing top-level names to ../../build/sensor/sensor.egg-info/top_level.txt
+[0.355s] reading manifest file '../../build/sensor/sensor.egg-info/SOURCES.txt'
+[0.356s] writing manifest file '../../build/sensor/sensor.egg-info/SOURCES.txt'
+[0.356s] running build
+[0.356s] running build_py
+[0.356s] running install
+[0.356s] running install_lib
+[0.357s] running install_data
+[0.357s] running install_egg_info
+[0.357s] removing '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages/sensor-0.0.1-py3.10.egg-info' (and everything under it)
+[0.357s] Copying ../../build/sensor/sensor.egg-info to /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages/sensor-0.0.1-py3.10.egg-info
+[0.358s] running install_scripts
+[0.368s] Installing sensor_hex script to /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/sensor
+[0.369s] writing list of installed files to '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/install.log'
+[0.381s] Invoked command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/sensor' returned '0': PYTHONPATH=/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sensor build --build-base /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/build install --record /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/install.log --single-version-externally-managed install_data

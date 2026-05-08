@@ -1,0 +1,13 @@
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/uninstall.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/tribo_uninstall.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/sensorT.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/sensorRFT.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/writer.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/writer_v2.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/test.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/edit_cache.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/rebuild_cache.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/list_install_components.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/install.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/install/local.dir
+/home/kang/Documents/tribo-slide/ros2_ws/build/tribo/CMakeFiles/install/strip.dir

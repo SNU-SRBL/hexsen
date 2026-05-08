@@ -1,0 +1,30 @@
+[0.104s] Invoking command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor:/opt/ros/humble CONDA_PROMPT_MODIFIER=(guest) /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer -- -j24 -l24
+[0.134s] [35m[1mConsolidate compiler generated dependencies of target writer_sensor[0m
+[0.141s] [ 33%] Built target writer_v2
+[0.147s] [ 66%] Built target ur_rtde_node
+[0.148s] [ 83%] [32mBuilding CXX object CMakeFiles/writer_sensor.dir/src/writer_sensor.cpp.o[0m
+[3.830s] [100%] [32m[1mLinking CXX executable writer_sensor[0m
+[4.015s] [100%] Built target writer_sensor
+[4.022s] Invoked command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor:/opt/ros/humble CONDA_PROMPT_MODIFIER=(guest) /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer -- -j24 -l24
+[4.029s] Invoking command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor:/opt/ros/humble CONDA_PROMPT_MODIFIER=(guest) /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer
+[4.036s] -- Install configuration: ""
+[4.036s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/ur_rtde_node
+[4.036s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_v2
+[4.036s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_sensor
+[4.037s] -- Set runtime path of "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_sensor" to ""
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/package_run_dependencies/writer
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/parent_prefix_path/writer
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.sh
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.dsv
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/path.sh
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/path.dsv
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.bash
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.sh
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.zsh
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.dsv
+[4.037s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/package.dsv
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/packages/writer
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/cmake/writerConfig.cmake
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/cmake/writerConfig-version.cmake
+[4.037s] -- Up-to-date: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/package.xml
+[4.038s] Invoked command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor:/opt/ros/humble CONDA_PROMPT_MODIFIER=(guest) /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer

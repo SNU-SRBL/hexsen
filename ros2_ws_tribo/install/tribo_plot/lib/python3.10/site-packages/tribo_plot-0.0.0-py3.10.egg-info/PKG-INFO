@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tribo_plot
+Version: 0.0.0
+Summary: Real-time plotting for sensor data using PyQtGraph
+Maintainer: kang
+Maintainer-email: kang@todo.todo
+License: Apache License 2.0
+Requires-Dist: setuptools

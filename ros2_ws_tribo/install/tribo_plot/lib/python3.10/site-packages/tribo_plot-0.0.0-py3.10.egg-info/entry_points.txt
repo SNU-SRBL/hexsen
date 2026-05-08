@@ -1,0 +1,11 @@
+[console_scripts]
+app1 = tribo_plot.app1:main
+app2 = tribo_plot.app2:main
+app2_old = tribo_plot.app2_old:main
+app_node = tribo_plot.app_node:main
+inference = tribo_plot.inference_node:main
+models = tribo_plot.models:main
+plot_sensor = tribo_plot.plot_sensor:main
+sensorT_fake = tribo_plot.sensorT_fake:main
+sensorT_large = tribo_plot.sensorT_large:main
+state_manager = tribo_plot.state_manager_node:main

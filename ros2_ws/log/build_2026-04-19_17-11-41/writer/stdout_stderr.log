@@ -1,0 +1,26 @@
+[35m[1mConsolidate compiler generated dependencies of target writer_v2[0m
+[35m[1mConsolidate compiler generated dependencies of target ur_rtde_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/writer_v2.dir/src/writer_v2.cpp.o[0m
+[ 75%] Built target ur_rtde_node
+[100%] [32m[1mLinking CXX executable writer_v2[0m
+[100%] Built target writer_v2
+-- Install configuration: ""
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/ur_rtde_node
+-- Set runtime path of "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/ur_rtde_node" to ""
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_v2
+-- Set runtime path of "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_v2" to ""
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/package_run_dependencies/writer
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/parent_prefix_path/writer
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.sh
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.dsv
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/path.sh
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/path.dsv
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.bash
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.sh
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.zsh
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.dsv
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/package.dsv
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/packages/writer
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/cmake/writerConfig.cmake
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/cmake/writerConfig-version.cmake
+-- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/package.xml

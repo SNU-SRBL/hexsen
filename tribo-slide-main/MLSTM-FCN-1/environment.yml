@@ -1,0 +1,9 @@
+name: mlstm_fcn
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - python=3.6
+  - msarahan::cudnn
+  - marta-sd::cudatoolkit
+prefix: /home/kang/miniconda3/envs/mlstm_fcn

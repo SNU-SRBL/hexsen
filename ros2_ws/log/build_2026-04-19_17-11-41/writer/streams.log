@@ -1,0 +1,30 @@
+[0.109s] Invoking command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer -- -j24 -l24
+[0.135s] [35m[1mConsolidate compiler generated dependencies of target writer_v2[0m
+[0.135s] [35m[1mConsolidate compiler generated dependencies of target ur_rtde_node[0m
+[0.146s] [ 25%] [32mBuilding CXX object CMakeFiles/writer_v2.dir/src/writer_v2.cpp.o[0m
+[0.152s] [ 75%] Built target ur_rtde_node
+[3.801s] [100%] [32m[1mLinking CXX executable writer_v2[0m
+[3.983s] [100%] Built target writer_v2
+[3.990s] Invoked command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer -- -j24 -l24
+[3.996s] Invoking command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer
+[4.000s] -- Install configuration: ""
+[4.000s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/ur_rtde_node
+[4.000s] -- Set runtime path of "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/ur_rtde_node" to ""
+[4.000s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_v2
+[4.002s] -- Set runtime path of "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/lib/writer/writer_v2" to ""
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/package_run_dependencies/writer
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/parent_prefix_path/writer
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.sh
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.dsv
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/path.sh
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/environment/path.dsv
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.bash
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.sh
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.zsh
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/local_setup.dsv
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/package.dsv
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/ament_index/resource_index/packages/writer
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/cmake/writerConfig.cmake
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/cmake/writerConfig-version.cmake
+[4.002s] -- Installing: /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer/share/writer/package.xml
+[4.003s] Invoked command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer

@@ -1,0 +1,2 @@
+Invoking command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer -DCMAKE_INSTALL_PREFIX=/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer
+Invoked command in '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer -DCMAKE_INSTALL_PREFIX=/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/writer

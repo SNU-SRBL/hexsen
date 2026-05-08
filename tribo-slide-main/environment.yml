@@ -1,0 +1,12 @@
+name: tribo
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - python=3.10
+  - ply
+  - sip
+  - toml
+  - pyqt
+  - pip:
+      - PySide2

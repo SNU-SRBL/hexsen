@@ -1,0 +1,4 @@
+source;share/writer/local_setup.bash
+source;share/writer/local_setup.dsv
+source;share/writer/local_setup.sh
+source;share/writer/local_setup.zsh

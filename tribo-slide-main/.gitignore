@@ -1,0 +1,34 @@
+# ROS2 build and install artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+
+# Data
+*.csv
+*.npy
+*.pkl
+*.h5
+
+# Logs
+*.log
+/MLSTM-FCN-torch/output/*.pth
+/MLSTM-FCN-torch/output/*.pkl
+/MLSTM-FCN-torch/output/*.json.txt
+
+# Models
+*.pt
+*.pth
+*.ckpt
+
+# Misc
+.DS_Store
+.env
+.vscode/
+.idea/

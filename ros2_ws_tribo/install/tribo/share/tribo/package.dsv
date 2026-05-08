@@ -1,0 +1,8 @@
+source;share/tribo/hook/cmake_prefix_path.ps1
+source;share/tribo/hook/cmake_prefix_path.dsv
+source;share/tribo/hook/cmake_prefix_path.sh
+source;share/tribo/local_setup.bash
+source;share/tribo/local_setup.dsv
+source;share/tribo/local_setup.ps1
+source;share/tribo/local_setup.sh
+source;share/tribo/local_setup.zsh

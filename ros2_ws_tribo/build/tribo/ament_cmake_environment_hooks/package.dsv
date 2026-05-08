@@ -1,0 +1,4 @@
+source;share/tribo/local_setup.bash
+source;share/tribo/local_setup.dsv
+source;share/tribo/local_setup.sh
+source;share/tribo/local_setup.zsh

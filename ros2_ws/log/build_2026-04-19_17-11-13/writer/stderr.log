@@ -1,0 +1,8 @@
+[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_v2.cpp:[m[K In member function ‘[01m[Kvoid Writer::RFT_callback(std_msgs::msg::Float32MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_v2.cpp:122:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg_force[m[K’ was not declared in this scope
+  122 |     [01;31m[Kg_force[m[K[0] = msg->data[0];
+      |     [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/writer_v2.dir/build.make:76: CMakeFiles/writer_v2.dir/src/writer_v2.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/writer_v2.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
