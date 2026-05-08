@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/sensor/sensor.egg-info/PKG-INFO
+writing dependency_links to ../../build/sensor/sensor.egg-info/dependency_links.txt
+writing entry points to ../../build/sensor/sensor.egg-info/entry_points.txt
+writing requirements to ../../build/sensor/sensor.egg-info/requires.txt
+writing top-level names to ../../build/sensor/sensor.egg-info/top_level.txt
+reading manifest file '../../build/sensor/sensor.egg-info/SOURCES.txt'
+writing manifest file '../../build/sensor/sensor.egg-info/SOURCES.txt'
+running build
+running build_py
+copying sensor/__init__.py -> /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/build/lib/sensor
+copying sensor/Receiver_24bit_ard_time.py -> /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/build/lib/sensor
+copying sensor/sensor_hex.py -> /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/build/lib/sensor
+running install
+running install_lib
+copying /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/build/lib/sensor/sensor_hex.py -> /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages/sensor
+byte-compiling /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages/sensor/sensor_hex.py to sensor_hex.cpython-310.pyc
+running install_data
+copying resource/sensor -> /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/share/ament_index/resource_index/packages
+copying package.xml -> /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/share/sensor
+running install_egg_info
+removing '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages/sensor-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/sensor/sensor.egg-info to /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/python3.10/site-packages/sensor-0.0.1-py3.10.egg-info
+running install_scripts
+Installing sensor_hex script to /home/seunghoon/Documents/BYJ-6axis/ros2_ws/install/sensor/lib/sensor
+writing list of installed files to '/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/sensor/install.log'

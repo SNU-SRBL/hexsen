@@ -1,0 +1,4 @@
+[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_sensor.cpp:[m[K In function ‘[01m[Kvoid memo()[m[K’:
+[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_sensor.cpp:43:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kelapsed_time[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   43 |       auto [01;35m[Kelapsed_time[m[K = std::chrono::duration_cast<std::chrono::duration<double>>(current_time - start_time).count();
+      |            [01;35m[K^~~~~~~~~~~~[m[K

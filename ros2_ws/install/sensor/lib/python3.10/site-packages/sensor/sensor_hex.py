@@ -5,6 +5,7 @@ from std_msgs.msg import Float32MultiArray
 from bleak import BleakClient, BleakScanner
 import struct
 import threading
+import time
 
 # BLE Configuration
 CHARACTERISTIC_UUID = "6f42123f-62f9-49cc-a61f-9043dcf7ea12"
@@ -23,13 +24,15 @@ class SensorPublisher(Node):
         self.loop = None
         self.client = None
         self.running = True
-        
-    def publish_sensor_data(self, ard_micros, voltages):
+
+        self.first_arduino_time = None
+
+    def publish_sensor_data(self, delta_seconds, i, voltages):
         """Publish 6 sensor values (without timestamp) as Float32MultiArray"""
         msg = Float32MultiArray()
-        msg.data = [float(v) for v in voltages]
+        msg.data = [float(delta_seconds), float(i)] + [float(v) for v in voltages]
         self.publisher.publish(msg)
-        self.get_logger().debug(f"Arduino µs: {ard_micros} | Voltages: {[f'{v:.4f}' for v in voltages]}")
+        self.get_logger().debug(f"Arduino µs: {delta_seconds} | Voltages: {[f'{v:.4f}' for v in voltages]}")
 
     def notification_handler(self, sender, data):
         """Handle BLE notifications"""
@@ -43,6 +46,12 @@ class SensorPublisher(Node):
             ard_micros = sample_data[0]
             raw_adc = sample_data[1:7]
 
+            if self.first_arduino_time is None:
+                self.first_arduino_time = ard_micros
+
+            delta_seconds = (ard_micros - self.first_arduino_time) / 1000000.0
+            # formatted_time = f"{delta_seconds:.6f}"
+
             # Convert raw ADC values to voltages
             voltages = [(val / MAX_24BIT_VAL) * (2 * ADS1256_VREF) for val in raw_adc]
 
@@ -50,7 +59,8 @@ class SensorPublisher(Node):
             # voltages = [max(-5.0, min(5.0, v)) for v in voltages]
 
             # Publish the data
-            self.publish_sensor_data(ard_micros, voltages)
+            self.publish_sensor_data(delta_seconds, i, voltages)
+            time.sleep(0.003) # sleep for 3 ms
 
     async def run_ble(self):
         """BLE connection and notification handling"""
