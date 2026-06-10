@@ -16,7 +16,7 @@ class RTDECommandNode : public rclcpp::Node
 {
 public:
   explicit RTDECommandNode(const std::string& file_index="trajectory")
-  : Node("rtde_command_node"), frequency_(50.0), current_index_(0), repeat_count_(0), max_repeats_(10)
+  : Node("rtde_command_node"), frequency_(50.0), current_index_(0), repeat_count_(0), max_repeats_(1)
   {
     // Parameters
     this->declare_parameter<std::string>("robot_ip", "192.168.10.2");
@@ -142,7 +142,7 @@ private:
       return;
     }
 
-    constexpr double speed = 0.05; // 0.10
+    constexpr double speed = 0.05; // 0.03, 0.05, 0.10
     constexpr double acceleration = 0.5;
     const double dt = 1.0 / frequency_; // Must match timer: 1/50 = 0.02
     constexpr double lookahead = 0.1; // loadhead time
@@ -203,7 +203,7 @@ int main(int argc, char** argv)
   if (argc >= 2) {
     file_index = argv[1];
   } else {
-    std::cerr << "Usage: ros2 run ur_cpp ur_rtde_node <file_index>" << std::endl;
+    std::cerr << "Usage: ros2 run writer ur_rtde_node <file_index>" << std::endl;
   }
 
   auto node = std::make_shared<RTDECommandNode>(file_index);

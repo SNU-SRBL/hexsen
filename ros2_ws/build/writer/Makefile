@@ -211,17 +211,30 @@ ur_rtde_node/fast:
 .PHONY : ur_rtde_node/fast
 
 #=============================================================================
-# Target rules for targets named writer_v2
+# Target rules for targets named ur_rtde_r
 
 # Build rule for target.
-writer_v2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writer_v2
-.PHONY : writer_v2
+ur_rtde_r: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ur_rtde_r
+.PHONY : ur_rtde_r
 
 # fast build rule for target.
-writer_v2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v2.dir/build.make CMakeFiles/writer_v2.dir/build
-.PHONY : writer_v2/fast
+ur_rtde_r/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur_rtde_r.dir/build.make CMakeFiles/ur_rtde_r.dir/build
+.PHONY : ur_rtde_r/fast
+
+#=============================================================================
+# Target rules for targets named writer_v3
+
+# Build rule for target.
+writer_v3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writer_v3
+.PHONY : writer_v3
+
+# fast build rule for target.
+writer_v3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/build
+.PHONY : writer_v3/fast
 
 #=============================================================================
 # Target rules for targets named writer_sensor
@@ -260,6 +273,30 @@ src/ur_rtde_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur_rtde_node.dir/build.make CMakeFiles/ur_rtde_node.dir/src/ur_rtde_node.cpp.s
 .PHONY : src/ur_rtde_node.cpp.s
 
+src/ur_rtde_r.o: src/ur_rtde_r.cpp.o
+.PHONY : src/ur_rtde_r.o
+
+# target to build an object file
+src/ur_rtde_r.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur_rtde_r.dir/build.make CMakeFiles/ur_rtde_r.dir/src/ur_rtde_r.cpp.o
+.PHONY : src/ur_rtde_r.cpp.o
+
+src/ur_rtde_r.i: src/ur_rtde_r.cpp.i
+.PHONY : src/ur_rtde_r.i
+
+# target to preprocess a source file
+src/ur_rtde_r.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur_rtde_r.dir/build.make CMakeFiles/ur_rtde_r.dir/src/ur_rtde_r.cpp.i
+.PHONY : src/ur_rtde_r.cpp.i
+
+src/ur_rtde_r.s: src/ur_rtde_r.cpp.s
+.PHONY : src/ur_rtde_r.s
+
+# target to generate assembly for a file
+src/ur_rtde_r.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur_rtde_r.dir/build.make CMakeFiles/ur_rtde_r.dir/src/ur_rtde_r.cpp.s
+.PHONY : src/ur_rtde_r.cpp.s
+
 src/writer_sensor.o: src/writer_sensor.cpp.o
 .PHONY : src/writer_sensor.o
 
@@ -284,29 +321,29 @@ src/writer_sensor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_sensor.dir/build.make CMakeFiles/writer_sensor.dir/src/writer_sensor.cpp.s
 .PHONY : src/writer_sensor.cpp.s
 
-src/writer_v2.o: src/writer_v2.cpp.o
-.PHONY : src/writer_v2.o
+src/writer_v3.o: src/writer_v3.cpp.o
+.PHONY : src/writer_v3.o
 
 # target to build an object file
-src/writer_v2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v2.dir/build.make CMakeFiles/writer_v2.dir/src/writer_v2.cpp.o
-.PHONY : src/writer_v2.cpp.o
+src/writer_v3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/src/writer_v3.cpp.o
+.PHONY : src/writer_v3.cpp.o
 
-src/writer_v2.i: src/writer_v2.cpp.i
-.PHONY : src/writer_v2.i
+src/writer_v3.i: src/writer_v3.cpp.i
+.PHONY : src/writer_v3.i
 
 # target to preprocess a source file
-src/writer_v2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v2.dir/build.make CMakeFiles/writer_v2.dir/src/writer_v2.cpp.i
-.PHONY : src/writer_v2.cpp.i
+src/writer_v3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/src/writer_v3.cpp.i
+.PHONY : src/writer_v3.cpp.i
 
-src/writer_v2.s: src/writer_v2.cpp.s
-.PHONY : src/writer_v2.s
+src/writer_v3.s: src/writer_v3.cpp.s
+.PHONY : src/writer_v3.s
 
 # target to generate assembly for a file
-src/writer_v2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v2.dir/build.make CMakeFiles/writer_v2.dir/src/writer_v2.cpp.s
-.PHONY : src/writer_v2.cpp.s
+src/writer_v3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/src/writer_v3.cpp.s
+.PHONY : src/writer_v3.cpp.s
 
 # Help Target
 help:
@@ -324,17 +361,21 @@ help:
 	@echo "... uninstall"
 	@echo "... writer_uninstall"
 	@echo "... ur_rtde_node"
+	@echo "... ur_rtde_r"
 	@echo "... writer_sensor"
-	@echo "... writer_v2"
+	@echo "... writer_v3"
 	@echo "... src/ur_rtde_node.o"
 	@echo "... src/ur_rtde_node.i"
 	@echo "... src/ur_rtde_node.s"
+	@echo "... src/ur_rtde_r.o"
+	@echo "... src/ur_rtde_r.i"
+	@echo "... src/ur_rtde_r.s"
 	@echo "... src/writer_sensor.o"
 	@echo "... src/writer_sensor.i"
 	@echo "... src/writer_sensor.s"
-	@echo "... src/writer_v2.o"
-	@echo "... src/writer_v2.i"
-	@echo "... src/writer_v2.s"
+	@echo "... src/writer_v3.o"
+	@echo "... src/writer_v3.i"
+	@echo "... src/writer_v3.s"
 .PHONY : help
 
 

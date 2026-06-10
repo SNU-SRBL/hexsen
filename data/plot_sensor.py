@@ -8,16 +8,16 @@ import pandas as pd
 experiment_name = ""
 # Read the data files
 # sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Sensor_Hex_.txt', header=None)
-sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/Log_Sensor_Hex_.txt', header=None)
+sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/Log_Sensor_Hex_.txt', header=0)
 
 # Extract columns for sensor data
 time_sensor = sensor_data.iloc[:, 0]
-v1 = sensor_data.iloc[:, 2]
-v2 = sensor_data.iloc[:, 3]
-v3 = sensor_data.iloc[:, 4]
-v4 = sensor_data.iloc[:, 5]
-v5 = sensor_data.iloc[:, 6]
-v6 = sensor_data.iloc[:, 7]
+v1 = sensor_data.iloc[:, 1]
+v2 = sensor_data.iloc[:, 2]
+v3 = sensor_data.iloc[:, 3]
+v4 = sensor_data.iloc[:, 4]
+v5 = sensor_data.iloc[:, 5]
+v6 = sensor_data.iloc[:, 6]
 
 
 # Create Figure 2: Sensor Data

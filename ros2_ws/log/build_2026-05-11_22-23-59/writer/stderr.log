@@ -1,0 +1,8 @@
+[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_v3.cpp:[m[K In member function ‘[01m[Kvoid Writer::sensor_callback(std_msgs::msg::Float32MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_v3.cpp:84:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kelapsed_time[m[K’ was not declared in this scope
+   84 |       [01;31m[Kelapsed_time[m[K = msg->data[0]; // ard_micros
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/writer_v3.dir/build.make:76: CMakeFiles/writer_v3.dir/src/writer_v3.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/writer_v3.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

@@ -2,10 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-experiment_name = "circle"
+experiment_name = "20260603_linear_error/"
 # Read the data files
-robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Robot_Pos_.txt', header=None)
-sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Sensor_Hex_.txt', header=None)
+# robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Robot_Pos_.txt', header=None)
+# sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Sensor_Hex_.txt', header=None)
+robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Robot_Pos_.txt', header=0)
+sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Sensor_Hex_.txt', header=0)
+
+is_force = True
 
 # Extract columns for robot position data
 time_robot = robot_data.iloc[:, 0]
@@ -24,6 +28,16 @@ v3 = sensor_data.iloc[:, 3]
 v4 = sensor_data.iloc[:, 4]
 v5 = sensor_data.iloc[:, 5]
 v6 = sensor_data.iloc[:, 6]
+
+if is_force:
+    robot_ft_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Robot_Force_.txt', header=0)
+    time_robot = robot_ft_data.iloc[:, 0]
+    fx = robot_ft_data.iloc[:, 1]
+    fy = robot_ft_data.iloc[:, 2]
+    fz = robot_ft_data.iloc[:, 3]
+    frx = robot_ft_data.iloc[:, 4]
+    fry = robot_ft_data.iloc[:, 5]
+    frz = robot_ft_data.iloc[:, 6]
 
 # Create Figure 1: Robot Position Data
 fig1, axes1 = plt.subplots(2, 3, figsize=(15, 10))
@@ -71,6 +85,7 @@ plt.tight_layout()
 # plt.savefig('/home/seunghoon/Documents/BYJ-6axis/data/robot_position_plot.png', dpi=300, bbox_inches='tight')
 plt.show()
 
+
 # Create Figure 2: Sensor Data
 fig2, axes2 = plt.subplots(2, 3, figsize=(15, 10))
 fig2.suptitle('Sensor Data (Voltage)', fontsize=16, fontweight='bold')
@@ -81,16 +96,46 @@ sensors = [v1, v2, v3, v4, v5, v6]
 labels = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6']
 
 for idx, (ax, sensor, label, color) in enumerate(zip(axes2.flat, sensors, labels, colors)):
-    ax.plot(time_sensor, sensor, color=color, linewidth=1.5)
+    ax.scatter(time_sensor, sensor, color=color, s=10)
+    # ax.plot(time_sensor, sensor, color=color, linewidth=1.5)
     ax.set_xlabel('Time (s)')
     ax.set_ylabel(f'{label} Voltage')
     ax.grid(True, alpha=0.3)
     ax.set_title(f'{label} vs Time')
+    # ax.set_xlim([25, 30])
+    #ax.set_ylim([1.5, 1.55])
 
 plt.tight_layout()
 # plt.savefig('/home/seunghoon/Documents/BYJ-6axis/data/sensor_data_plot.png', dpi=300, bbox_inches='tight')
 plt.show()
 
+
+
+if is_force:
+    # Create Figure 2: Sensor Data
+    fig3, axes3 = plt.subplots(2, 3, figsize=(15, 10))
+    fig3.suptitle('Robot FT Data', fontsize=16, fontweight='bold')
+
+    # Sensor plots
+    colors = ['blue', 'green', 'red', 'cyan', 'magenta', 'orange']
+
+    sensors = [fx, fy, fz, frx, fry, frz]
+    labels = ['FX', 'FY', 'FZ', 'FRX', 'FRY', 'FRZ']
+
+    for idx, (ax, sensor, label, color) in enumerate(zip(axes3.flat, sensors, labels, colors)):
+        ax.scatter(time_sensor, sensor, color=color, s=10)
+        # ax.plot(time_sensor, sensor, color=color, linewidth=1.5)
+        ax.set_xlabel('Time (s)')
+        ax.set_ylabel(f'{label} N or Nm')
+        ax.grid(True, alpha=0.3)
+        ax.set_title(f'{label} vs Time')
+        # ax.set_xlim([25, 30])
+        #ax.set_ylim([1.5, 1.55])
+
+    plt.tight_layout()
+    # plt.savefig('/home/seunghoon/Documents/BYJ-6axis/data/sensor_data_plot.png', dpi=300, bbox_inches='tight')
+    plt.show()
+
+
 print("Plots saved successfully!")
-# print("Robot position plot: /home/seunghoon/Documents/BYJ-6axis/data/robot_position_plot.png")
-# print("Sensor data plot: /home/seunghoon/Documents/BYJ-6axis/data/sensor_data_plot.png")
+

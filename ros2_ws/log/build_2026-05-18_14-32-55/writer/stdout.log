@@ -1,0 +1,4 @@
+[ 25%] Built target ur_rtde_node
+[ 37%] [32mBuilding CXX object CMakeFiles/writer_v3.dir/src/writer_v3.cpp.o[0m
+[ 62%] Built target writer_sensor
+[ 87%] Built target ur_rtde_r

@@ -823,6 +823,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/writer_uninstall.dir/DependInfo.cmake"
   "CMakeFiles/ur_rtde_node.dir/DependInfo.cmake"
-  "CMakeFiles/writer_v2.dir/DependInfo.cmake"
+  "CMakeFiles/ur_rtde_r.dir/DependInfo.cmake"
+  "CMakeFiles/writer_v3.dir/DependInfo.cmake"
   "CMakeFiles/writer_sensor.dir/DependInfo.cmake"
   )
