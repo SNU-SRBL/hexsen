@@ -18,9 +18,10 @@ def parse_arguments():
         "--traj", 
         type=str, 
         default="linear", 
-        choices=["linear", "floor1", "floor2", "floor34", "all"], 
+        choices=["linear", "floor1", "floor2", "floor34","type2", "all"], 
         help="Trajectory type to execute"
     )
+    parser.add_argument("linear_length", type=int, nargs='?', default=220, help="Length of linear trajectory in mm (only for 'linear' traj)")
     
     return parser.parse_args()
 
@@ -85,6 +86,8 @@ def main(args):
     # Get current pose
     # current_pose = rtde_r.getActualTCPPose()  # [x, y, z, Rx, Ry, Rz]
     # print("Current TCP Pose:", current_pose)
+
+    n_set = 1
     
     # Base position and orientation
     base_position = (-0.32918, 0.04309, 0.00550)  # in meters
@@ -93,19 +96,32 @@ def main(args):
     # Generate 20 points in upper hemisphere (convert mm to m)
     MM_TO_M = 0.001
 
-    floor1 = [(-50*MM_TO_M, y*MM_TO_M, 0) for y in [200, 100, -100, -200]] + [(-150*MM_TO_M, y*MM_TO_M, 0) for y in [-100, 0, 100]]
-    floor2 = [(-50*MM_TO_M, y*MM_TO_M, 75*MM_TO_M) for y in np.linspace(200, -200, 5)]\
-      + [(-150*MM_TO_M, y*MM_TO_M, 75*MM_TO_M) for y in np.linspace(-100, 100, 3)]
-    floor34 = [(-50*MM_TO_M, y*MM_TO_M, 150*MM_TO_M) for y in np.linspace(100, -100, 3)]\
-      + [(-150*MM_TO_M, 0, 150*MM_TO_M), (-50*MM_TO_M, 0, 225*MM_TO_M)]
+    linear_length = args.linear_length*MM_TO_M
+    x_offset2 = 60*MM_TO_M
+
+    floor1 = [(-50*MM_TO_M, y*MM_TO_M, 0, True) for y in [200, 100, -100, -200]] + [(-150*MM_TO_M, y*MM_TO_M, 0, True) for y in [-100, 0, 100]]
+    floor2 = [(-50*MM_TO_M, y*MM_TO_M, 75*MM_TO_M, True) for y in np.linspace(200, -200, 5)]\
+      + [(-150*MM_TO_M, y*MM_TO_M, 75*MM_TO_M, True) for y in np.linspace(-100, 100, 3)]
+    floor34 = [(-50*MM_TO_M, y*MM_TO_M, 150*MM_TO_M, True) for y in np.linspace(100, -100, 3)]\
+      + [(-150*MM_TO_M, 0, 150*MM_TO_M, True), (-50*MM_TO_M, 0, 225*MM_TO_M, True)]
+
+    # linear = [(x, 0.0, 0.0, False) for x in [0, -linear_length, 0]] * 10 * n_set
+    linear = [(x, 0.0, 0.0, False) for x in [-x_offset2, -linear_length, -x_offset2]] * 10 * n_set
+
     
-    linear = [(x*MM_TO_M, 0.0, 0.0) for x in [0, -220, 0]] * 10
+    type2_radius = 125*MM_TO_M
+    type2_sphere = [(0, 0, 0, False), (-x_offset2, 0, 0, True), (0, 0, 0 ,False)] + \
+                   [(0, 0, 0, False), (-x_offset2, 0, 0, False), (-x_offset2, type2_radius, 0, True), (-x_offset2, 0, 0, False), (0, 0, 0, False)] + \
+                   [(0, 0, 0, False), (-x_offset2, 0, 0, False), (-x_offset2, -type2_radius, 0, True), (-x_offset2, 0, 0, False), (0, 0, 0, False)] + \
+                   [(0, 0, 0, False), (-x_offset2, 0, 0, False), (-x_offset2 - type2_radius, 0, 0, True), (-x_offset2, 0, 0, False), (0, 0, 0, False)] + \
+                   [(0, 0, 0, False), (-x_offset2, 0, 0, False), (-x_offset2, 0, type2_radius, True), (-x_offset2, 0, 0, False), (0, 0, 0, False)]
 
     trajectory_map = {
         "linear": linear,
         "floor1": floor1,
         "floor2": floor2,
         "floor34": floor34,
+        "type2": type2_sphere,
         "all": floor1 + floor2 + floor34  # Combines all points into one sequence
     }
     
@@ -148,24 +164,26 @@ def main(args):
         x_point = x_base + sphere_offset[0]
         y_point = y_base + sphere_offset[1]
         z_point = z_base + sphere_offset[2]
-        
+        is_turn = sphere_offset[3]
+
         print(f"Point {point_idx + 1}/{len(sphere_points)}: ({x_point:.5f}, {y_point:.5f}, {z_point:.5f})")
 
         rotvec = ur_rpy_to_rotvec(rx_base, ry_base, rz_base, degrees=True)
         current_pose = [x_point, y_point, z_point, rotvec[0], rotvec[1], rotvec[2]]
         move_ur(current_pose, move_speed, acceleration, rest_time)
 
-        # 27 combinations: rx, ry, rz each with 3 values (-10, 0, +10)
-        for rx_offset in orientation_offsets:
-            for ry_offset in orientation_offsets:
-                for rz_offset in orientation_offsets:
-                    rx = rx_base + rx_offset
-                    ry = ry_base + ry_offset
-                    rz = rz_base + rz_offset  # Unit: Degree
-                    
-                    rotvec = ur_rpy_to_rotvec(rx, ry, rz, degrees=True)
-                    current_pose = [x_point, y_point, z_point, rotvec[0], rotvec[1], rotvec[2]]
-                    move_ur(current_pose, move_speed, acceleration, rest_time)
+        if is_turn:
+            # 27 combinations: rx, ry, rz each with 3 values (-10, 0, +10)
+            for rx_offset in orientation_offsets:
+                for ry_offset in orientation_offsets:
+                    for rz_offset in orientation_offsets:
+                        rx = rx_base + rx_offset
+                        ry = ry_base + ry_offset
+                        rz = rz_base + rz_offset  # Unit: Degree
+                        
+                        rotvec = ur_rpy_to_rotvec(rx, ry, rz, degrees=True)
+                        current_pose = [x_point, y_point, z_point, rotvec[0], rotvec[1], rotvec[2]]
+                        move_ur(current_pose, move_speed, acceleration, rest_time)
         
         rotvec = ur_rpy_to_rotvec(rx_base, ry_base, rz_base, degrees=True)
         current_pose = [x_point, y_point, z_point, rotvec[0], rotvec[1], rotvec[2]]
@@ -175,8 +193,8 @@ def main(args):
     rotvec = ur_rpy_to_rotvec(rx_base, ry_base, rz_base, degrees=True)
     move_ur([x_base, y_base, z_base, rotvec[0], rotvec[1], rotvec[2]], move_speed, acceleration, rest_time)
 
+    time.sleep(5.0)
     print(f"\nCompleted {pose_count} poses!")
-    time.sleep(2.0)
     
     # rtde_c.servoStop()
     rtde_c.disconnect()

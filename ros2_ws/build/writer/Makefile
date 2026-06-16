@@ -224,17 +224,17 @@ ur_rtde_r/fast:
 .PHONY : ur_rtde_r/fast
 
 #=============================================================================
-# Target rules for targets named writer_v3
+# Target rules for targets named writer_v4
 
 # Build rule for target.
-writer_v3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writer_v3
-.PHONY : writer_v3
+writer_v4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writer_v4
+.PHONY : writer_v4
 
 # fast build rule for target.
-writer_v3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/build
-.PHONY : writer_v3/fast
+writer_v4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v4.dir/build.make CMakeFiles/writer_v4.dir/build
+.PHONY : writer_v4/fast
 
 #=============================================================================
 # Target rules for targets named writer_sensor
@@ -321,29 +321,29 @@ src/writer_sensor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_sensor.dir/build.make CMakeFiles/writer_sensor.dir/src/writer_sensor.cpp.s
 .PHONY : src/writer_sensor.cpp.s
 
-src/writer_v3.o: src/writer_v3.cpp.o
-.PHONY : src/writer_v3.o
+src/writer_v4.o: src/writer_v4.cpp.o
+.PHONY : src/writer_v4.o
 
 # target to build an object file
-src/writer_v3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/src/writer_v3.cpp.o
-.PHONY : src/writer_v3.cpp.o
+src/writer_v4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v4.dir/build.make CMakeFiles/writer_v4.dir/src/writer_v4.cpp.o
+.PHONY : src/writer_v4.cpp.o
 
-src/writer_v3.i: src/writer_v3.cpp.i
-.PHONY : src/writer_v3.i
+src/writer_v4.i: src/writer_v4.cpp.i
+.PHONY : src/writer_v4.i
 
 # target to preprocess a source file
-src/writer_v3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/src/writer_v3.cpp.i
-.PHONY : src/writer_v3.cpp.i
+src/writer_v4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v4.dir/build.make CMakeFiles/writer_v4.dir/src/writer_v4.cpp.i
+.PHONY : src/writer_v4.cpp.i
 
-src/writer_v3.s: src/writer_v3.cpp.s
-.PHONY : src/writer_v3.s
+src/writer_v4.s: src/writer_v4.cpp.s
+.PHONY : src/writer_v4.s
 
 # target to generate assembly for a file
-src/writer_v3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v3.dir/build.make CMakeFiles/writer_v3.dir/src/writer_v3.cpp.s
-.PHONY : src/writer_v3.cpp.s
+src/writer_v4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_v4.dir/build.make CMakeFiles/writer_v4.dir/src/writer_v4.cpp.s
+.PHONY : src/writer_v4.cpp.s
 
 # Help Target
 help:
@@ -363,7 +363,7 @@ help:
 	@echo "... ur_rtde_node"
 	@echo "... ur_rtde_r"
 	@echo "... writer_sensor"
-	@echo "... writer_v3"
+	@echo "... writer_v4"
 	@echo "... src/ur_rtde_node.o"
 	@echo "... src/ur_rtde_node.i"
 	@echo "... src/ur_rtde_node.s"
@@ -373,9 +373,9 @@ help:
 	@echo "... src/writer_sensor.o"
 	@echo "... src/writer_sensor.i"
 	@echo "... src/writer_sensor.s"
-	@echo "... src/writer_v3.o"
-	@echo "... src/writer_v3.i"
-	@echo "... src/writer_v3.s"
+	@echo "... src/writer_v4.o"
+	@echo "... src/writer_v4.i"
+	@echo "... src/writer_v4.s"
 .PHONY : help
 
 

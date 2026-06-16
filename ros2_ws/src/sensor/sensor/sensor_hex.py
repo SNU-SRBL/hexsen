@@ -27,12 +27,12 @@ class SensorPublisher(Node):
 
         self.first_arduino_time = None
 
-    def publish_sensor_data(self, delta_seconds, voltages):
+    def publish_sensor_data(self, delta_seconds, voltages, index):
         """Publish 6 sensor values (without timestamp) as Float32MultiArray"""
         msg = Float32MultiArray()
-        msg.data = [float(delta_seconds)] + [float(v) for v in voltages]
+        msg.data = [float(delta_seconds)] + [float(v) for v in voltages] + [float(index)]
         self.publisher.publish(msg)
-        self.get_logger().debug(f"Arduino µs: {delta_seconds} | Voltages: {[f'{v:.4f} mV' for v in voltages]}")
+        self.get_logger().debug(f"Arduino µs: {delta_seconds} | Voltages: {[f'{v:.4f} mV' for v in voltages]} | Index: {index}")
 
     def notification_handler(self, sender, data):
         """Handle BLE notifications"""
@@ -63,7 +63,7 @@ class SensorPublisher(Node):
             # voltages = [max(-5.0, min(5.0, v)) for v in voltages]
 
             # Publish the data
-            self.publish_sensor_data(delta_seconds, voltages)
+            self.publish_sensor_data(delta_seconds, voltages, i)
             time.sleep(0.003) # sleep for 3 ms
 
     async def run_ble(self):

@@ -19,7 +19,7 @@ include_directories(${ur_rtde_INCLUDE_DIRS})
 # Add the executable
 add_executable(ur_rtde_node src/ur_rtde_node.cpp)
 add_executable(ur_rtde_r src/ur_rtde_r.cpp)
-add_executable(writer_v3 src/writer_v3.cpp)
+add_executable(writer_v4 src/writer_v4.cpp)
 add_executable(writer_sensor src/writer_sensor.cpp)
 
 # Link libraries
@@ -33,7 +33,7 @@ ament_target_dependencies(ur_rtde_r
   std_msgs
   ur_rtde
 )
-ament_target_dependencies(writer_v3
+ament_target_dependencies(writer_v4
   rclcpp
   std_msgs
 )
@@ -49,7 +49,7 @@ target_link_libraries(ur_rtde_node rtde)
 target_link_libraries(ur_rtde_r rtde)
 
 # Install the executable
-install(TARGETS ur_rtde_node ur_rtde_r writer_v3 writer_sensor
+install(TARGETS ur_rtde_node ur_rtde_r writer_v4 writer_sensor
   DESTINATION lib/${PROJECT_NAME}
 )
 

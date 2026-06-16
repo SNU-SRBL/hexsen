@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-experiment_name = "20260603_linear_error/"
+experiment_name = ""
 # Read the data files
 # robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Robot_Pos_.txt', header=None)
 # sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Sensor_Hex_.txt', header=None)
@@ -21,13 +21,13 @@ ry = robot_data.iloc[:, 5]
 rz = robot_data.iloc[:, 6]
 
 # Extract columns for sensor data
-time_sensor = sensor_data.iloc[:, 0]
-v1 = sensor_data.iloc[:, 1]
-v2 = sensor_data.iloc[:, 2]
-v3 = sensor_data.iloc[:, 3]
-v4 = sensor_data.iloc[:, 4]
-v5 = sensor_data.iloc[:, 5]
-v6 = sensor_data.iloc[:, 6]
+time_sensor = sensor_data.iloc[:, 1]
+v1 = sensor_data.iloc[:, 2]
+v2 = sensor_data.iloc[:, 3]
+v3 = sensor_data.iloc[:, 4]
+v4 = sensor_data.iloc[:, 5]
+v5 = sensor_data.iloc[:, 6]
+v6 = sensor_data.iloc[:, 7]
 
 if is_force:
     robot_ft_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Robot_Force_.txt', header=0)

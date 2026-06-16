@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-3b9eccbf992ae38669b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "writer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-59d77e61f3cb6694e416.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ur_rtde_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ur_rtde_node-82d8efb65a891f8d0543.json",
+					"name" : "ur_rtde_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ur_rtde_r::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ur_rtde_r-63fa52e1545d201aef0d.json",
+					"name" : "ur_rtde_r",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_sensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_sensor-62733c0a0e5ea4d7825f.json",
+					"name" : "writer_sensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_uninstall-fa2c9f12c32d9121be86.json",
+					"name" : "writer_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_v4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_v4-531cdaad6ea9f4ce780e.json",
+					"name" : "writer_v4",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer",
+		"source" : "/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
