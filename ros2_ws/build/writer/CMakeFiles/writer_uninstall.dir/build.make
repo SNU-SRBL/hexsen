@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer
+CMAKE_SOURCE_DIR = /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer
+CMAKE_BINARY_DIR = /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer
 
 # Utility rule file for writer_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/writer_uninstall.dir/compiler_depend.make
 include CMakeFiles/writer_uninstall.dir/progress.make
 
 CMakeFiles/writer_uninstall:
-	/usr/bin/cmake -P /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 writer_uninstall: CMakeFiles/writer_uninstall
 writer_uninstall: CMakeFiles/writer_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/writer_uninstall.dir/clean:
 .PHONY : CMakeFiles/writer_uninstall.dir/clean
 
 CMakeFiles/writer_uninstall.dir/depend:
-	cd /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer /home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer /home/seunghoon/Documents/BYJ-6axis/ros2_ws/build/writer/CMakeFiles/writer_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer/CMakeFiles/writer_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/writer_uninstall.dir/depend
 

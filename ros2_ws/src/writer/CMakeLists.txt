@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(ur_rtde REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
@@ -36,6 +37,7 @@ ament_target_dependencies(ur_rtde_r
 ament_target_dependencies(writer_v4
   rclcpp
   std_msgs
+  sensor_msgs
 )
 ament_target_dependencies(writer_sensor
   rclcpp

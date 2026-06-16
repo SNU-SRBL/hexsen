@@ -1,0 +1,4 @@
+source;share/sensorcpp/local_setup.bash
+source;share/sensorcpp/local_setup.dsv
+source;share/sensorcpp/local_setup.sh
+source;share/sensorcpp/local_setup.zsh

@@ -11,12 +11,15 @@
 #include <iostream>
 
 #include "rclcpp/rclcpp.hpp"
+#include "sensor_msgs/msg/imu.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 
 using namespace std;
 
 #define sensorDataNum (6) // 6 voltages (CH1-CH6)
 #define forceDataNum (6)   // 6 forces (FX, FY, FZ, RX, RY, RZ)
+#define imuDataNum (9) // 9 IMU data points (3 angular velocities, 3 accelerations, 3 magnetic fields)
+
 const int robotArmPosDataNum = 6; // x, y, z, r, p, y
 const int robotArmJPosDataNum = 6;
 
@@ -27,9 +30,10 @@ double tr_x, tr_y, tr_z, r_x, r_y, r_z, r_w;
 double robotArmPos[robotArmPosDataNum];
 // double robotArmJPos[robotArmJPosDataNum];
 
-// Global variables for Sensor and Force
+// Global variables for Sensor, Force, and IMU data
 float g_sensorData[sensorDataNum]; // [CH1, CH2, CH3, CH4, CH5, CH6]
 float g_force[forceDataNum]; // [FX, FY, FZ, RX, RY, RZ]
+float g_imuData[imuDataNum]; // [CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8, CH9]
 
 // Mutex to protect global variables and timing
 std::mutex data_mutex;
@@ -54,9 +58,9 @@ public:
       g_start_time_initialized = true;
     }
 
-    robot_pos.open("/home/seunghoon/Documents/BYJ-6axis/data/Log_Robot_Pos_.txt");
-    sensor_T.open("/home/seunghoon/Documents/BYJ-6axis/data/Log_Sensor_Hex_.txt");
-    robot_ft.open("/home/seunghoon/Documents/BYJ-6axis/data/Log_Robot_Force_.txt");
+    robot_pos.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Robot_Pos_.txt");
+    sensor_T.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Sensor_Hex_.txt");
+    robot_ft.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Robot_Force_.txt");
     robot_pos << "time,x,y,z,r,p,y," << endl; // Header for robot position data
     sensor_T << "time,ardtime,CH1,CH2,CH3,CH4,CH5,CH6,idx," << endl; // Header for sensor data
     robot_ft << "time,FX,FY,FZ,RX,RY,RZ," << endl; // Header for robot force data

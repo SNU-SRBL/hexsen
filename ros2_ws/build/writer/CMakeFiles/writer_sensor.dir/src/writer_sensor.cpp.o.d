@@ -1,5 +1,5 @@
 CMakeFiles/writer_sensor.dir/src/writer_sensor.cpp.o: \
- /home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_sensor.cpp \
+ /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer/src/writer_sensor.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

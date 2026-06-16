@@ -1,0 +1,8 @@
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer/src/writer_v4.cpp:14:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/imu.hpp: No such file or directory
+   14 | #include [01;31m[K"sensor_msgs/msg/imu.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/writer_v4.dir/build.make:76: CMakeFiles/writer_v4.dir/src/writer_v4.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/writer_v4.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

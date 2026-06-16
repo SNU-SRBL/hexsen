@@ -1,8 +1,0 @@
-[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_v3.cpp:[m[K In member function ‘[01m[Kvoid Writer::sensor_callback(std_msgs::msg::Float32MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/seunghoon/Documents/BYJ-6axis/ros2_ws/src/writer/src/writer_v3.cpp:94:7:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_pose[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_pos[m[K’?
-   94 |       [01;31m[Krobot_pose[m[K
-      |       [01;31m[K^~~~~~~~~~[m[K
-      |       [32m[Krobot_pos[m[K
-gmake[2]: *** [CMakeFiles/writer_v3.dir/build.make:76: CMakeFiles/writer_v3.dir/src/writer_v3.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/writer_v3.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
