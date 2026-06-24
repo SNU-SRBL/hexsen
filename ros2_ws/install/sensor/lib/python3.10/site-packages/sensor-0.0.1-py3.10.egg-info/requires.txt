@@ -1,5 +1,0 @@
-bleak
-setuptools
-
-[test]
-pytest

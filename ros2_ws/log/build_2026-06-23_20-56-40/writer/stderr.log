@@ -1,8 +1,0 @@
-[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer/src/writer_imu.cpp:[m[K In constructor ‘[01m[KWriter::Writer()[m[K’:
-[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer/src/writer_imu.cpp:46:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_imu[m[K’ was not declared in this scope; did you mean ‘[01m[Ksubscription_imu_[m[K’?
-   46 |     [01;31m[Ksubscription_imu[m[K = this->create_subscription<std_msgs::msg::Float32MultiArray>(
-      |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
-      |     [32m[Ksubscription_imu_[m[K
-gmake[2]: *** [CMakeFiles/writer_imu.dir/build.make:76: CMakeFiles/writer_imu.dir/src/writer_imu.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/writer_imu.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

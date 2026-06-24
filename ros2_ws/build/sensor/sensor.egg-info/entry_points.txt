@@ -1,3 +1,0 @@
-[console_scripts]
-sensor_hex = sensor.sensor_hex:main
-

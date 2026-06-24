@@ -1,4 +1,0 @@
-Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp -- -j24 -l24
-Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp -- -j24 -l24
-Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp
-Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp
