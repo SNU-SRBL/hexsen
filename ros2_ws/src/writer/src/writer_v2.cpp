@@ -16,7 +16,7 @@
 using namespace std;
 
 #define sensorDataNum (6) // 6 voltages (CH1-CH6)
-const int robotArmPosDataNum = 6; // x, y, z, r, p, y
+const int robotArmPosDataNum = 6; // x, y, z, rx, ry, rz (rotation vector)
 const int robotArmJPosDataNum = 6;
 
 // Global variables for TF

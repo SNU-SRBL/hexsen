@@ -19,7 +19,7 @@ using namespace std;
 #define forceDataNum (6)   // 6 forces (FX, FY, FZ, RX, RY, RZ)
 #define imuDataNum (9) // 9 IMU data points (3 angular velocities, 3 accelerations, 3 magnetic fields)
 
-const int robotArmPosDataNum = 6; // x, y, z, r, p, y
+const int robotArmPosDataNum = 6; // x, y, z, rx, ry, rz (rotation vector)
 const int robotArmJPosDataNum = 6;
 
 // Global variables for TF
@@ -61,7 +61,7 @@ public:
     sensor_T.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Sensor_Hex_.txt");
     robot_ft.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Robot_Force_.txt");
     sensor_imu.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Sensor_IMU_.txt");
-    robot_pos << "time,x,y,z,r,p,y," << endl; // Header for robot position data
+    robot_pos << "time,x,y,z,rx,ry,rz," << endl; // Header for robot position data
     sensor_T << "time,ardtime,CH1,CH2,CH3,CH4,CH5,CH6,idx," << endl; // Header for sensor data
     robot_ft << "time,FX,FY,FZ,RX,RY,RZ," << endl; // Header for robot force data
     sensor_imu << "time,z,y,x,w,angvel_x,angvel_y,angvel_z,acc_x,acc_y,acc_z,"

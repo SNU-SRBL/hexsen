@@ -17,7 +17,7 @@ using namespace std;
 
 #define sensorDataNum (6) // 6 voltages (CH1-CH6)
 #define forceDataNum (6)   // 6 forces (FX, FY, FZ, RX, RY, RZ)
-const int robotArmPosDataNum = 6; // x, y, z, r, p, y
+const int robotArmPosDataNum = 6; // x, y, z, rx, ry, rz (rotation vector)
 const int robotArmJPosDataNum = 6;
 
 // Global variables for TF
@@ -48,7 +48,7 @@ public:
     robot_pos.open("/home/seunghoon/Documents/BYJ-6axis/data/Log_Robot_Pos_.txt");
     sensor_T.open("/home/seunghoon/Documents/BYJ-6axis/data/Log_Sensor_Hex_.txt");
     robot_ft.open("/home/seunghoon/Documents/BYJ-6axis/data/Log_Robot_Force_.txt");
-    robot_pos << "time,x,y,z,r,p,y," << endl; // Header for robot position data
+    robot_pos << "time,x,y,z,rx,ry,rz," << endl; // Header for robot position data
     sensor_T << "time,CH1,CH2,CH3,CH4,CH5,CH6," << endl; // Header for sensor data
     robot_ft << "time,FX,FY,FZ,RX,RY,RZ," << endl; // Header for robot force data
 

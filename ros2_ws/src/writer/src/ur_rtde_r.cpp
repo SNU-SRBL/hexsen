@@ -51,7 +51,7 @@ private:
   void publishTcpPose() {
     if (!rtde_receive_) return;
 
-    std::vector<double> tcp = rtde_receive_->getActualTCPPose();
+    std::vector<double> tcp = rtde_receive_->getActualTCPPose(); // X,Y,Z,RX,RY,RZ (Rotation vector)
     auto message = std_msgs::msg::Float32MultiArray();
     message.data.resize(tcp.size());
 
