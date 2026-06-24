@@ -1,7 +1,7 @@
 // #include "serial.h"
 #include <thread>
 #include "rclcpp/rclcpp.hpp"
-#include "sensor_msgs/msg/imu.hpp"
+#include "std_msgs/msg/float32_multi_array.hpp"
 #include "sensorcpp/serial.hpp"
 
 class IMUPublisher : public rclcpp::Node {
@@ -10,9 +10,25 @@ public:
     serialIMU = new sensorcpp::serial(ID_IMU, baudrate);
 
     // Thread for IMU reading using readIMU()
+    serialIMU->serialWrite("<00cmf>");
+    sleep(2);
+    serialIMU->serialWrite("<01cmf>");
+    sleep(2);
+    serialIMU->serialWrite("<00caf>");
+    sleep(2);
+    serialIMU->serialWrite("<01caf>");
+    sleep(2);
+    serialIMU->serialWrite("<00cg>");
+    sleep(2);
+    serialIMU->serialWrite("<01cg>");
+    sleep(2);
+
+    serialIMU->serialWrite("<sof2>"); // ZYXW
+    sleep(3);
+    RCLCPP_INFO_ONCE(this->get_logger(), "====IMU sensor is started ===");
     t_serialIMU = std::thread(&sensorcpp::serial::readIMU, serialIMU);
 
-    imu_publisher_ = this->create_publisher<sensor_msgs::msg::Imu>("imu_data", 10);
+    imu_publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_data", 10);
     timer_ = this->create_wall_timer(
       std::chrono::milliseconds(4),
       std::bind(&IMUPublisher::publishIMUData, this)
@@ -31,21 +47,16 @@ public:
 
 private:
   void publishIMUData() {
-    float imu_data[18];
+    float imu_data[20];
     serialIMU->getData(imu_data);
 
-    auto message = sensor_msgs::msg::Imu();
-    
+    auto message = std_msgs::msg::Float32MultiArray();
+    message.data.resize(20);
+
     // Fill in the message fields with imu_data
-    message.linear_acceleration.x = imu_data[0];
-    message.linear_acceleration.y = imu_data[1];
-    message.linear_acceleration.z = imu_data[2];
-    message.angular_velocity.x = imu_data[9];
-    message.angular_velocity.y = imu_data[10];
-    message.angular_velocity.z = imu_data[11];
-    // message.magnetic_field.x = imu_data[6];
-    // message.magnetic_field.y = imu_data[7];
-    // message.magnetic_field.z = imu_data[8];
+    for (size_t i = 0; i < 20; ++i) {
+      message.data[i] = imu_data[i];
+    }
     imu_publisher_->publish(message);
   }
 
@@ -53,7 +64,7 @@ private:
   const int baudrate;
   sensorcpp::serial* serialIMU;
   std::thread t_serialIMU;
-  rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_publisher_;
+  rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr imu_publisher_;
   rclcpp::TimerBase::SharedPtr timer_;
 
 };  // End of IMUPublisher class

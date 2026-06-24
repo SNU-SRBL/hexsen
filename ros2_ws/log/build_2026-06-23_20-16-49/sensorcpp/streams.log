@@ -1,0 +1,33 @@
+[0.110s] Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp -- -j24 -l24
+[0.133s] [35m[1mConsolidate compiler generated dependencies of target imu_pub[0m
+[0.144s] [ 33%] [32mBuilding CXX object CMakeFiles/imu_pub.dir/src/main.cpp.o[0m
+[1.160s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:53:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ was not declared in this scope
+[1.160s]    53 | ::Publisher<[01;31m[Ksensor_msgs[m[K::msg::Imu>::SharedPtr imu_publisher_;
+[1.160s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[1.160s] 
+[1.160s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:53:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.161s]    53 | gs::msg::Imu[01;31m[K>[m[K::SharedPtr imu_publisher_;
+[1.161s]       |             [01;31m[K^[m[K
+[1.161s] 
+[1.161s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:53:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.161s]    53 | :msg::Imu>::[01;31m[KSharedPtr[m[K imu_publisher_;
+[1.161s]       |             [01;31m[K^~~~~~~~~[m[K
+[1.161s]       |                      [32m[K;[m[K
+[1.161s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:53:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_publisher_[m[K’ does not name a type; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.161s]    53 | ::SharedPtr [01;31m[Kimu_publisher_[m[K;
+[1.161s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.161s]       |             [32m[Krmw_publisher_t[m[K
+[1.164s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:[m[K In constructor ‘[01m[KIMUPublisher::IMUPublisher()[m[K’:
+[1.164s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.164s]    17 |     [01;31m[Kimu_publisher_[m[K = this->create_publisher<std_msgs::msg::Float32MultiArray>("imu_data", 10);
+[1.164s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.164s]       |     [32m[Krmw_publisher_t[m[K
+[1.174s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:[m[K In member function ‘[01m[Kvoid IMUPublisher::publishIMUData()[m[K’:
+[1.174s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:46:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[1.174s]    46 |     [01;31m[Kimu_publisher_[m[K->publish(message);
+[1.174s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.174s]       |     [32m[Krmw_publisher_t[m[K
+[1.497s] gmake[2]: *** [CMakeFiles/imu_pub.dir/build.make:76: CMakeFiles/imu_pub.dir/src/main.cpp.o] Error 1
+[1.497s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/imu_pub.dir/all] Error 2
+[1.497s] gmake: *** [Makefile:146: all] Error 2
+[1.499s] Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp -- -j24 -l24

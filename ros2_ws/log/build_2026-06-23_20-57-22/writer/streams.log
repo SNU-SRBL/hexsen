@@ -1,0 +1,34 @@
+[0.110s] Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer -- -j24 -l24
+[0.134s] [35m[1mConsolidate compiler generated dependencies of target writer_imu[0m
+[0.140s] [ 20%] Built target writer_v4
+[0.141s] [ 30%] [32mBuilding CXX object CMakeFiles/writer_imu.dir/src/writer_imu.cpp.o[0m
+[0.142s] [ 50%] Built target writer_sensor
+[0.149s] [ 70%] Built target ur_rtde_r
+[0.149s] [ 90%] Built target ur_rtde_node
+[3.806s] [100%] [32m[1mLinking CXX executable writer_imu[0m
+[3.980s] [100%] Built target writer_imu
+[3.986s] Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer -- -j24 -l24
+[3.987s] Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer
+[3.993s] -- Install configuration: ""
+[3.993s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/ur_rtde_node
+[3.994s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/ur_rtde_r
+[3.994s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_v4
+[3.994s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_sensor
+[3.994s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_imu
+[3.998s] -- Set runtime path of "/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_imu" to ""
+[3.998s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/ament_index/resource_index/package_run_dependencies/writer
+[3.998s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/ament_index/resource_index/parent_prefix_path/writer
+[3.998s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.sh
+[3.998s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.dsv
+[3.998s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/environment/path.sh
+[3.999s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/environment/path.dsv
+[3.999s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/local_setup.bash
+[3.999s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/local_setup.sh
+[3.999s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/local_setup.zsh
+[3.999s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/local_setup.dsv
+[3.999s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/package.dsv
+[3.999s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/ament_index/resource_index/packages/writer
+[3.999s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/cmake/writerConfig.cmake
+[3.999s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/cmake/writerConfig-version.cmake
+[4.000s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/package.xml
+[4.000s] Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer

@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target imu_pub[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/imu_pub.dir/src/main.cpp.o[0m
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:[m[K In member function ‘[01m[Kvoid IMUPublisher::publishIMUData()[m[K’:
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:48:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct sensor_msgs::msg::Imu_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kmagnetic_field[m[K’
+   48 |     message.[01;31m[Kmagnetic_field[m[K.x = imu_data[6];
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:49:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct sensor_msgs::msg::Imu_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kmagnetic_field[m[K’
+   49 |     message.[01;31m[Kmagnetic_field[m[K.y = imu_data[7];
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/main.cpp:50:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct sensor_msgs::msg::Imu_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kmagnetic_field[m[K’
+   50 |     message.[01;31m[Kmagnetic_field[m[K.z = imu_data[8];
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/imu_pub.dir/build.make:76: CMakeFiles/imu_pub.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/imu_pub.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

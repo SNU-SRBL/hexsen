@@ -11,7 +11,6 @@
 #include <iostream>
 
 #include "rclcpp/rclcpp.hpp"
-#include "sensor_msgs/msg/imu.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 
 using namespace std;
@@ -61,9 +60,12 @@ public:
     robot_pos.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Robot_Pos_.txt");
     sensor_T.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Sensor_Hex_.txt");
     robot_ft.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Robot_Force_.txt");
+    sensor_imu.open("/home/seunghoon/Documents/BYJ-hexsen/data/Log_Sensor_IMU_.txt");
     robot_pos << "time,x,y,z,r,p,y," << endl; // Header for robot position data
     sensor_T << "time,ardtime,CH1,CH2,CH3,CH4,CH5,CH6,idx," << endl; // Header for sensor data
     robot_ft << "time,FX,FY,FZ,RX,RY,RZ," << endl; // Header for robot force data
+    sensor_imu << "time,z,y,x,w,angvel_x,angvel_y,angvel_z,acc_x,acc_y,acc_z,"
+               << "z,y,x,w,angvel_x,angvel_y,angvel_z,acc_x,acc_y,acc_z," << endl; // Header for IMU data
 
     subscription_tcp_pose_ = this->create_subscription<std_msgs::msg::Float32MultiArray>(
         "/ur_rtde/tcp_pose", 10, std::bind(&Writer::tcp_pose_callback, this, std::placeholders::_1));
@@ -71,6 +73,8 @@ public:
         "/ur_rtde/tcp_force", 10, std::bind(&Writer::tcp_force_callback, this, std::placeholders::_1));
     subscription_sensor_ = this->create_subscription<std_msgs::msg::Float32MultiArray>(
         "/sensor/data", 10, std::bind(&Writer::sensor_callback, this, std::placeholders::_1));
+    subscription_imu_ = this->create_subscription<std_msgs::msg::Float32MultiArray>(
+        "/imu_data", 10, std::bind(&Writer::imu_callback, this, std::placeholders::_1));
 
     RCLCPP_INFO(this->get_logger(), "Writer node initialized...");
   }
@@ -80,6 +84,8 @@ public:
     if (sensor_T.is_open()) {
       sensor_T.close();
       robot_pos.close();
+      robot_ft.close();
+      sensor_imu.close();
     }
   }
 
@@ -156,11 +162,30 @@ private:
     sensor_T.flush();
   }
 
+  void imu_callback(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
+  {
+    if (msg->data.size() < 20) {
+      return;
+    }
+
+    std::lock_guard<std::mutex> lock(data_mutex);
+
+    double elapsed = get_elapsed_time_unlocked();
+
+    sensor_imu << elapsed << ",";
+    for (int i = 0; i < 20; ++i) {
+      sensor_imu << msg->data[i] << ",";
+    }
+    sensor_imu << endl;
+    sensor_imu.flush();
+  }
+
   rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr subscription_tcp_pose_;
   rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr subscription_tcp_force_;
   rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr subscription_sensor_;
+  rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr subscription_imu_;
 
-  std::ofstream robot_pos, sensor_T, robot_ft;
+  std::ofstream robot_pos, sensor_T, robot_ft, sensor_imu;
 
   double temp_robotArmPos[robotArmPosDataNum];
   float temp_sensorData[sensorDataNum];

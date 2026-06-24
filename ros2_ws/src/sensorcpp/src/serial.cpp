@@ -30,7 +30,7 @@ vector<string> split_comma(uint8_t *incomingData, char delimiter) {
 
 serial::serial(const char *device, const int baud) {
 	this->serialOpen(device, baud);
-	for (int i = 0; i < 18 ; i++){
+	for (int i = 0; i < 20 ; i++){
 		this->imuData[i] = 0;
 	}
 }
@@ -167,8 +167,8 @@ int serial::readIMU() {
 				num = stoi(num_temp);
 				{
 					std::lock_guard<std::mutex> lock(imu_mutex_);
-					for (int i = 0; i <9; i++){
-						this->imuData[9 * num + i] = stof(result.at(i+1));
+					for (int i = 0; i <10; i++){
+						this->imuData[10 * num + i] = stof(result.at(i+1));
 					}
 				}
 				this->last_update_imu_[num] = chrono::system_clock::now();
@@ -188,7 +188,7 @@ void serial::stopReading(){
 void serial::getData(float* data){
     {
         std::lock_guard<std::mutex> lock(imu_mutex_);
-        for (int i = 0; i < 18; i++){
+        for (int i = 0; i < 20; i++){
             data[i] = this->imuData[i];
         }
     }

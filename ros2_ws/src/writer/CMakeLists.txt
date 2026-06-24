@@ -9,7 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
+# find_package(sensor_msgs REQUIRED)
 find_package(ur_rtde REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
@@ -22,6 +22,7 @@ add_executable(ur_rtde_node src/ur_rtde_node.cpp)
 add_executable(ur_rtde_r src/ur_rtde_r.cpp)
 add_executable(writer_v4 src/writer_v4.cpp)
 add_executable(writer_sensor src/writer_sensor.cpp)
+add_executable(writer_imu src/writer_imu.cpp)
 
 # Link libraries
 ament_target_dependencies(ur_rtde_node
@@ -37,9 +38,12 @@ ament_target_dependencies(ur_rtde_r
 ament_target_dependencies(writer_v4
   rclcpp
   std_msgs
-  sensor_msgs
 )
 ament_target_dependencies(writer_sensor
+  rclcpp
+  std_msgs
+)
+ament_target_dependencies(writer_imu
   rclcpp
   std_msgs
 )
@@ -51,7 +55,7 @@ target_link_libraries(ur_rtde_node rtde)
 target_link_libraries(ur_rtde_r rtde)
 
 # Install the executable
-install(TARGETS ur_rtde_node ur_rtde_r writer_v4 writer_sensor
+install(TARGETS ur_rtde_node ur_rtde_r writer_v4 writer_sensor writer_imu
   DESTINATION lib/${PROJECT_NAME}
 )
 

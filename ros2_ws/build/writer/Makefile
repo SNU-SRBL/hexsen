@@ -249,6 +249,19 @@ writer_sensor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_sensor.dir/build.make CMakeFiles/writer_sensor.dir/build
 .PHONY : writer_sensor/fast
 
+#=============================================================================
+# Target rules for targets named writer_imu
+
+# Build rule for target.
+writer_imu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 writer_imu
+.PHONY : writer_imu
+
+# fast build rule for target.
+writer_imu/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_imu.dir/build.make CMakeFiles/writer_imu.dir/build
+.PHONY : writer_imu/fast
+
 src/ur_rtde_node.o: src/ur_rtde_node.cpp.o
 .PHONY : src/ur_rtde_node.o
 
@@ -296,6 +309,30 @@ src/ur_rtde_r.s: src/ur_rtde_r.cpp.s
 src/ur_rtde_r.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur_rtde_r.dir/build.make CMakeFiles/ur_rtde_r.dir/src/ur_rtde_r.cpp.s
 .PHONY : src/ur_rtde_r.cpp.s
+
+src/writer_imu.o: src/writer_imu.cpp.o
+.PHONY : src/writer_imu.o
+
+# target to build an object file
+src/writer_imu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_imu.dir/build.make CMakeFiles/writer_imu.dir/src/writer_imu.cpp.o
+.PHONY : src/writer_imu.cpp.o
+
+src/writer_imu.i: src/writer_imu.cpp.i
+.PHONY : src/writer_imu.i
+
+# target to preprocess a source file
+src/writer_imu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_imu.dir/build.make CMakeFiles/writer_imu.dir/src/writer_imu.cpp.i
+.PHONY : src/writer_imu.cpp.i
+
+src/writer_imu.s: src/writer_imu.cpp.s
+.PHONY : src/writer_imu.s
+
+# target to generate assembly for a file
+src/writer_imu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/writer_imu.dir/build.make CMakeFiles/writer_imu.dir/src/writer_imu.cpp.s
+.PHONY : src/writer_imu.cpp.s
 
 src/writer_sensor.o: src/writer_sensor.cpp.o
 .PHONY : src/writer_sensor.o
@@ -362,6 +399,7 @@ help:
 	@echo "... writer_uninstall"
 	@echo "... ur_rtde_node"
 	@echo "... ur_rtde_r"
+	@echo "... writer_imu"
 	@echo "... writer_sensor"
 	@echo "... writer_v4"
 	@echo "... src/ur_rtde_node.o"
@@ -370,6 +408,9 @@ help:
 	@echo "... src/ur_rtde_r.o"
 	@echo "... src/ur_rtde_r.i"
 	@echo "... src/ur_rtde_r.s"
+	@echo "... src/writer_imu.o"
+	@echo "... src/writer_imu.i"
+	@echo "... src/writer_imu.s"
 	@echo "... src/writer_sensor.o"
 	@echo "... src/writer_sensor.i"
 	@echo "... src/writer_sensor.s"

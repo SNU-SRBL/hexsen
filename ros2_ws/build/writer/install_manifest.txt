@@ -2,6 +2,7 @@
 /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/ur_rtde_r
 /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_v4
 /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_sensor
+/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/lib/writer/writer_imu
 /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/ament_index/resource_index/package_run_dependencies/writer
 /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/ament_index/resource_index/parent_prefix_path/writer
 /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/writer/share/writer/environment/ament_prefix_path.sh

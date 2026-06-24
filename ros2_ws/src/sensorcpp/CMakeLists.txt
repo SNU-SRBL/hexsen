@@ -8,7 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 # Create executable
 add_executable(imu_pub src/main.cpp src/serial.cpp)
@@ -20,7 +20,7 @@ target_include_directories(imu_pub PUBLIC
 )
 
 # Link libraries
-ament_target_dependencies(imu_pub rclcpp sensor_msgs)
+ament_target_dependencies(imu_pub rclcpp std_msgs)
 
 # Install executable
 install(TARGETS imu_pub

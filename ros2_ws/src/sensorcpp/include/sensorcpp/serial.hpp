@@ -39,7 +39,7 @@ private:
 
 public:
 
-	float* imuData = new float[18]; // 9*2
+	float* imuData = new float[20]; // 9*2
 	serial(const char *device, const int baud);
 	~serial();
 	int serialOpen(const char *device, const int baud);

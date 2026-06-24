@@ -4,10 +4,10 @@ import pandas as pd
 
 experiment_name = ""
 # Read the data files
-# robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Robot_Pos_.txt', header=None)
-# sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/data_{experiment_name}/Log_Sensor_Hex_.txt', header=None)
-robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Robot_Pos_.txt', header=0)
-sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Sensor_Hex_.txt', header=0)
+# robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-hexsen/data/data_{experiment_name}/Log_Robot_Pos_.txt', header=None)
+# sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-hexsen/data/data_{experiment_name}/Log_Sensor_Hex_.txt', header=None)
+robot_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-hexsen/data/{experiment_name}Log_Robot_Pos_.txt', header=0)
+sensor_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-hexsen/data/{experiment_name}Log_Sensor_Hex_.txt', header=0)
 
 is_force = True
 
@@ -30,7 +30,7 @@ v5 = sensor_data.iloc[:, 6]
 v6 = sensor_data.iloc[:, 7]
 
 if is_force:
-    robot_ft_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-6axis/data/{experiment_name}Log_Robot_Force_.txt', header=0)
+    robot_ft_data = pd.read_csv(f'/home/seunghoon/Documents/BYJ-hexsen/data/{experiment_name}Log_Robot_Force_.txt', header=0)
     time_robot = robot_ft_data.iloc[:, 0]
     fx = robot_ft_data.iloc[:, 1]
     fy = robot_ft_data.iloc[:, 2]

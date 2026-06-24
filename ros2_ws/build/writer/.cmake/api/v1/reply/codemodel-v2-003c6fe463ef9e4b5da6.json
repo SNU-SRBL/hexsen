@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-6a41c360a8844e46a45c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "writer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-59d77e61f3cb6694e416.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ur_rtde_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ur_rtde_node-0539ccd0eb48f0280abd.json",
+					"name" : "ur_rtde_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ur_rtde_r::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ur_rtde_r-4d5f51da68fbec8aa5be.json",
+					"name" : "ur_rtde_r",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_imu::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_imu-9930a5d56b173e36bdfe.json",
+					"name" : "writer_imu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_sensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_sensor-98ed76290ee2d64247a1.json",
+					"name" : "writer_sensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_uninstall-590768a18d8bf7f809a7.json",
+					"name" : "writer_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "writer_v4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-writer_v4-5d16cf111df8bcccffc3.json",
+					"name" : "writer_v4",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/writer",
+		"source" : "/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/writer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,37 @@
+[0.116s] Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp -- -j24 -l24
+[0.162s] [ 66%] [32mBuilding CXX object CMakeFiles/imu_pub.dir/src/serial.cpp.o[0m
+[0.162s] [ 66%] [32mBuilding CXX object CMakeFiles/imu_pub.dir/src/main.cpp.o[0m
+[0.365s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:[m[K In member function ‘[01m[Kint sensorcpp::serial::serialReadLine(unsigned int, uint8_t*)[m[K’:
+[0.365s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:141:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.365s]   141 |         for (int i = 0; [01;35m[Ki < limit[m[K; i++)
+[0.365s]       |                         [01;35m[K~~^~~~~~~[m[K
+[0.365s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:[m[K In member function ‘[01m[Kint sensorcpp::serial::readIMU()[m[K’:
+[0.365s] [01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:155:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KtrimData[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[0.365s]   155 |         uint8_t [01;35m[KtrimData[m[K[255];
+[0.366s]       |                 [01;35m[K^~~~~~~~[m[K
+[2.117s] [100%] [32m[1mLinking CXX executable imu_pub[0m
+[2.261s] [100%] Built target imu_pub
+[2.266s] Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --build /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp -- -j24 -l24
+[2.267s] Invoking command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp
+[2.271s] -- Install configuration: ""
+[2.271s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/lib/sensorcpp/imu_pub
+[2.272s] -- Set runtime path of "/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/lib/sensorcpp/imu_pub" to ""
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/include
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/include/sensorcpp
+[2.272s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/include/sensorcpp/serial.hpp
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/ament_index/resource_index/package_run_dependencies/sensorcpp
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/ament_index/resource_index/parent_prefix_path/sensorcpp
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/ament_prefix_path.sh
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/ament_prefix_path.dsv
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/path.sh
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/path.dsv
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.bash
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.sh
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.zsh
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.dsv
+[2.272s] -- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/package.dsv
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/ament_index/resource_index/packages/sensorcpp
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/cmake/sensorcppConfig.cmake
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/cmake/sensorcppConfig-version.cmake
+[2.272s] -- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/package.xml
+[2.273s] Invoked command in '/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensor:/opt/ros/humble /usr/bin/cmake --install /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/build/sensorcpp

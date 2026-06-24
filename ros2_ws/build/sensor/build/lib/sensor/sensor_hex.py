@@ -11,6 +11,7 @@ import time
 CHARACTERISTIC_UUID = "6f42123f-62f9-49cc-a61f-9043dcf7ea12"
 DEVICE_NAME = "NanoSense_ADS1256"
 TARGET = "05:07:99:8D:11:B9" # Our sensor device address
+TARGET = "27:B3:6F:32:CE:65" # ADC3
 
 # ADS1256 Conversion Constants
 ADS1256_VREF = 2.5

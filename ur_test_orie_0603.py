@@ -21,7 +21,8 @@ def parse_arguments():
         choices=["linear", "floor1", "floor2", "floor34","type2", "all"], 
         help="Trajectory type to execute"
     )
-    parser.add_argument("linear_length", type=int, nargs='?', default=220, help="Length of linear trajectory in mm (only for 'linear' traj)")
+    parser.add_argument("linear_length", type=int, nargs='?', default=200, help="Length of linear trajectory in mm (only for 'linear' traj)")
+    # 0603 - linear 220
     
     return parser.parse_args()
 
@@ -98,6 +99,7 @@ def main(args):
 
     linear_length = args.linear_length*MM_TO_M
     x_offset2 = 60*MM_TO_M
+    x_offset2 = 0
 
     floor1 = [(-50*MM_TO_M, y*MM_TO_M, 0, True) for y in [200, 100, -100, -200]] + [(-150*MM_TO_M, y*MM_TO_M, 0, True) for y in [-100, 0, 100]]
     floor2 = [(-50*MM_TO_M, y*MM_TO_M, 75*MM_TO_M, True) for y in np.linspace(200, -200, 5)]\

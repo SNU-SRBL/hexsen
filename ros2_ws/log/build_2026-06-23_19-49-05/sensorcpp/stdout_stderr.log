@@ -1,0 +1,33 @@
+[ 66%] [32mBuilding CXX object CMakeFiles/imu_pub.dir/src/serial.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/imu_pub.dir/src/main.cpp.o[0m
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:[m[K In member function ‘[01m[Kint sensorcpp::serial::serialReadLine(unsigned int, uint8_t*)[m[K’:
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:141:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  141 |         for (int i = 0; [01;35m[Ki < limit[m[K; i++)
+      |                         [01;35m[K~~^~~~~~~[m[K
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:[m[K In member function ‘[01m[Kint sensorcpp::serial::readIMU()[m[K’:
+[01m[K/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/src/sensorcpp/src/serial.cpp:155:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KtrimData[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  155 |         uint8_t [01;35m[KtrimData[m[K[255];
+      |                 [01;35m[K^~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable imu_pub[0m
+[100%] Built target imu_pub
+-- Install configuration: ""
+-- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/lib/sensorcpp/imu_pub
+-- Set runtime path of "/home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/lib/sensorcpp/imu_pub" to ""
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/include
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/include/sensorcpp
+-- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/include/sensorcpp/serial.hpp
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/ament_index/resource_index/package_run_dependencies/sensorcpp
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/ament_index/resource_index/parent_prefix_path/sensorcpp
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/ament_prefix_path.sh
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/path.sh
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/environment/path.dsv
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.bash
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.sh
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.zsh
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/local_setup.dsv
+-- Installing: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/package.dsv
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/ament_index/resource_index/packages/sensorcpp
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/cmake/sensorcppConfig.cmake
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/cmake/sensorcppConfig-version.cmake
+-- Up-to-date: /home/seunghoon/Documents/BYJ-hexsen/ros2_ws/install/sensorcpp/share/sensorcpp/package.xml
